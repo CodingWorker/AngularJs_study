@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <P>{{myUrl}}</P>
+    <p>{{firstName}}</p>
+</div>
+<script>
+    var app=angular.module("myApp",[]);
+    app.controller("myCtrl",function($scope,$location){
+        $scope.firstName="John";
+        // 必须使用$location变量
+        $scope.myUrl=$location.absUrl();
+    });
+</script>
+</body>
+</html>

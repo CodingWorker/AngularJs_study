@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div data-ng-app="" data-ng-init="quantity=2;cost=5;name='apple';data={firstName:'John',lastName:'Doe'};arr=['a','b',12]">
+	<p>{{1+1}}</p>
+	<p>name:{{name}}</p>
+	<p>{{"quantity: "+quantity+"  cost: "+cost}}</p>
+	<p>quantity*cost:{{quantity*cost}}</p>
+	<p>对象的使用：{{"firstName: "+data.firstName+"  lastName: "+data.lastName}}</p>
+	<p>数组的使用:{{'arr[0]: '+arr[0]+"  arr[1]: "+arr[1]+"  arr[2]: "+arr[2]}}</p>
+</div>
+
+</body>
+</html>

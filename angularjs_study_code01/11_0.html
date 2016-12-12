@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<style type="text/css">
+		table,tr,td{
+			border:1px solid grey;
+			border-collapse:collapse;
+			padding:5px;
+		}
+		table tr:nth-child(odd){
+			background-color: #f1f1f1;
+		}
+		table tr:nth-child(even){
+			background-color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+<table>
+	<tr ng-repeat="x in sites"><td>{{$index+1}}</td><td>{{x.site}}</td><td>{{x.url}}</td></tr>
+</table>
+</div>
+<script>
+	var app=angular.module("myApp",[]);
+	app.controller("myCtrl",function($scope){
+		$scope.sites=[
+    {site : "Google", url : "http://www.google.com"},
+    {site : "Runoob", url : "http://www.runoob.com"},
+    {site : "Taobao", url : "http://www.taobao.com"}];
+	});
+</script>
+</body>
+</html>
