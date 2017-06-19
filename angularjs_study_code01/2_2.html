@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<!-- 谁拥有ng-bind属性吗，谁的innerHtml就会被变量替换,因此下面的姓名为都不会显示 -->
+	<div data-ng-app="" data-ng-init="firstName='John'">
+		<p data-ng-bind="firstName">姓名为:<span></span></p>
+	</div>
+
+</body>
+</html>

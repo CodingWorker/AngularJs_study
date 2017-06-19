@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+	<!-- 绑定输入域数据到变量 -->
+		名：<input type="text" ng-model="firstName"><br />
+		姓：<input type="text" ng-model="lastName"><br />
+		年龄：<input type="text" ng-model="age"> <br />
+		<!-- 表达式输出变量值 -->
+		姓名：{{firstName+" "+lastName}}<br />
+		年龄：{{age}}
+	</div>
+	<script type="text/javascript">
+		var app=angular.module('myApp',[]);
+		// myCtrl控制器绑定此函数，将此控制器绑定到这个参数，这个参数下的所有的子参数就是在该控制器下的所有的ng-model,这里在控制器中处理就相当于是初始化变量，最后变量还会受到输入域的影响
+		app.controller('myCtrl',function($scope){
+			$scope.firstName="John";
+			$scope.lastName="Doe";
+			$scope.age=12;
+		});
+	</script>
+
+</body>
+</html>
